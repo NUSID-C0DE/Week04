@@ -22,7 +22,7 @@ void setup()
 
 void loop() {
   if (irrecv.decode(&results)) {
-    Serial.println(results.value, HEX);
+    Serial.println(results.value, DEC);
     irrecv.resume(); // Receive the next value
   }
 }
