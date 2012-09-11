@@ -17,13 +17,12 @@ void setup()
   size(255, 255);
   frameRate(10);
   //for Windows
-  String portName = "COM97"; //change this port name to the same name as Tools -> Serial Port 
+  //String portName = "COM97"; //change this port name to the same name as Tools -> Serial Port 
   
   //for Mac OS
-  //String portName = Serial.list()[0]; //for Mac use the first port or the serial list
-   
+  String portName = Serial.list()[0]; //for Mac use the first port or the serial list   
   myPort = new Serial(this, portName, 9600);
-  myPort.bufferUntil('\n'); // buffer incoming characters until line feed.
+
 }
 
 void draw()

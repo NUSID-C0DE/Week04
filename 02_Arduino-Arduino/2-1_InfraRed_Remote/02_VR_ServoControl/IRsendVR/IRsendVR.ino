@@ -6,9 +6,9 @@
  * http://arcfn.com
  */
 
-#include <IRremote.h>
+#include <IRremote.h> // include IR remote library
 
-IRsend irsend;
+IRsend irsend; // variable for ir send class
 
 void setup()
 {
@@ -22,7 +22,8 @@ void loop() {
    int angle = map(val,0,1023,0,180);
    
    
-   irsend.sendSony(angle , 12); // Sony TV power code
+   irsend.sendSony(angle , 12); // send signal by Sony TV code (val, byte length);
+  
    delay(40);
    
 }

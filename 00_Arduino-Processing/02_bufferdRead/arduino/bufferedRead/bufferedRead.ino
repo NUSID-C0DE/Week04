@@ -27,7 +27,6 @@ void loop() {
   // print out the value you read:
   Serial.println(brightness); 
 
-   
   analogWrite(led, brightness);   // turn the LED on (HIGH is the voltage level)
 
   delay(10);               // wait for a while

@@ -15,13 +15,11 @@ int val;      // Data received from the serial port
 
 void setup() 
 {
-  size(200, 200);
- 
+  size(200, 200); 
   //for Windows
   String portName = "COM97"; //change this port the same name as Arduino->Tool->Serial Port
   //for Mac OSX
   //String portName = Serial.list()[0]; //the first port
-   
   myPort = new Serial(this, portName, 9600);
   myPort.bufferUntil('\n'); // buffer incoming characters until line feed.
 }
@@ -33,7 +31,6 @@ void draw()
   rect(50, 50, 100, 100);
 }
 
-
 //serialEvent function is called when incoming character reaches '\n'
 void serialEvent(Serial p){
   String s = "";
@@ -41,7 +38,7 @@ void serialEvent(Serial p){
     s = p.readString();   // read string.
     if(s != null){ 
       println("received:"+s);
-      val = int(s);     // convert string value into float value
+      val = int(s);       // convert string value into float value
       println("val:"+val);
     }
   }

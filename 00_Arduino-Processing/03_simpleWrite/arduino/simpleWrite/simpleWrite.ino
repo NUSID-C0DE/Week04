@@ -25,7 +25,7 @@ void loop() {
 
   // read the input on analog pin 0:
   if(Serial.available() > 0){
-    brightness = Serial.parseInt();
+    brightness = Serial.parseInt(); //convert String value from Processing to Integer value. 
   }
   // print out the value you read:
   Serial.println(brightness);    
